@@ -7,7 +7,7 @@ public class Department implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Integer Id;
+	private Integer id;
 	private String name;
 
 	public Department() {
@@ -15,16 +15,16 @@ public class Department implements Serializable {
 	}
 
 	public Department(Integer id, String name) {
-		Id = id;
+		this.id = id;
 		this.name = name;
 	}
 
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -37,7 +37,7 @@ public class Department implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Id);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -49,11 +49,11 @@ public class Department implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		return Objects.equals(Id, other.Id);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Department [Id=" + Id + ", name=" + name + "]";
+		return "Department [Id=" + id + ", name=" + name + "]";
 	}
 }
